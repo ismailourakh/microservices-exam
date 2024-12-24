@@ -5,12 +5,12 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: produit-service
-          uri: http://localhost:8081
+        - id: produit
+          uri: lb://produit
           predicates:
             - Path=/produits/**
-        - id: commande-service
-          uri: http://localhost:8082
+        - id: commande
+          uri: lb://commande
           predicates:
             - Path=/commandes/**
 eureka:

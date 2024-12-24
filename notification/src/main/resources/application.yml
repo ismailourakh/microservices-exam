@@ -3,7 +3,10 @@ server:
 
 spring:
   application:
-    name: notification
+    name: notification-service
+
+kafka:
+  bootstrap-servers: localhost:9092
 
 eureka:
   client:
@@ -11,6 +14,3 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
-
-kafka:
-  bootstrap-servers: localhost:9092
